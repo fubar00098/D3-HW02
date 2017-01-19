@@ -4,11 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Untitled Document</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <style>
+        p{
+        border: 2px solid red;
+            height:40px;
+            width:120px;
+            line-height: 40px;
+            text-align: center;
+            color: blue;
+        }
+    
+    </style>
+    
 </head>
 
 <body>
+<p></p>
+<input type="button" onclick="launch()" value="啟動">
 
-    Hello word
+<script>
+    function random(n,m){
+    return Math.ceil(Math.random()*(m-n)+n);
+}
+   
+    function launch(){
+    var num=random(1911,2017);
+        console.log(num);
+        d3.select("p").text(num);
+        
+    }
+</script>
+
 
 </body>
 
